@@ -5,17 +5,17 @@ from .parser_prescription import PrescriptionParser
 from .parser_patient import PatientDetailsParser
 
 
-# Set Tesseract executable path
-pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+# # Set Tesseract executable path
+# pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 
-# This path for Poppler is correct, assuming you have extracted it there.
-POPPLER_PATH = r"C:\poppler-24.02.0\Library\bin"
+# # This path for Poppler is correct, assuming you have extracted it there.
+# POPPLER_PATH = r"C:\poppler-24.02.0\Library\bin"
 
 def extract(file_path, file_format):
     # Step 1 : Extract text from pdf file
     # Convert PDF to images
-    pages = convert_from_path(file_path, poppler_path=POPPLER_PATH)
-
+    # pages = convert_from_path(file_path, poppler_path=POPPLER_PATH)
+    pages = convert_from_path(file_path) 
     document_text = ''
     if len(pages)>0:
         page = pages[0]
