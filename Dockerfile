@@ -4,9 +4,8 @@ FROM python:3.11-slim
 # Set the working directory inside the container
 WORKDIR /app
 
-# Install system dependencies
-# We added libgl1-mesa-glx for OpenCV
-RUN apt-get update && apt-get install -y tesseract-ocr poppler-utils libgl1-mesa-glx
+# Install system dependencies with the corrected package name for libGL
+RUN apt-get update && apt-get install -y tesseract-ocr poppler-utils libgl1
 
 # This tells Render which port your app uses
 EXPOSE 10000
