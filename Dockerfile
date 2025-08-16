@@ -5,8 +5,11 @@ FROM python:3.11-slim
 WORKDIR /app
 
 # Install system dependencies (Tesseract and Poppler)
-# This RUN command works because we have full control in a Dockerfile
 RUN apt-get update && apt-get install -y tesseract-ocr poppler-utils
+
+# --- ADD THIS LINE ---
+# This tells Render which port to listen to
+EXPOSE 10000
 
 # Copy and install Python requirements
 COPY requirements.txt .
@@ -16,5 +19,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Tell Render what command to run when the server starts
-# Note: Render provides the $PORT variable, so we use that.
 CMD ["uvicorn", "backend.src.main:app", "--host", "0.0.0.0", "--port", "10000"]
