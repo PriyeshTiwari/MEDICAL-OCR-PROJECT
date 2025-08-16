@@ -1,0 +1,10 @@
+fastapi
+uvicorn[standard]
+python-multipart
+pdf2image
+pytesseract
+opencv-python
+numpy
+pillow
+fastapi[all]
+FuzzyTM

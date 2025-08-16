@@ -1,0 +1,350 @@
+/* --- Basic Styling ---
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f0f2f5;
+    margin: 0;
+    color: #333;
+}
+
+/* --- Main Container --- */
+/* .container {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+}
+
+h1 {
+    color: #1a73e8;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    color: #5f6368;
+    margin-bottom: 2rem;
+} */
+
+/* --- Form Styling --- */
+/* form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.radio-group {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.radio-group label {
+    cursor: pointer;
+    font-weight: 500;
+}
+
+input[type="radio"] {
+    margin-right: 0.5rem;
+}
+
+/* --- File Upload Area --- */
+/* #file-drop-area {
+    border: 2px dashed #1a73e8;
+    border-radius: 8px;
+    padding: 2rem;
+    background-color: #f8f9fa;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#file-drop-area.drag-over {
+    background-color: #e8f0fe;
+}
+
+#file-name {
+    font-weight: bold;
+    color: #1a73e8;
+    margin-top: 1rem;
+} */
+
+/* --- Button & Loader --- */
+/* button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    background: linear-gradient(45deg, #1a73e8, #4285f4);
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.loader {
+    display: none;
+    width: 40px;
+    height: 40px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #1a73e8;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 2rem auto 0;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+} */
+
+/* --- Results Area --- */
+/* #result-container {
+    margin-top: 2rem;
+    text-align: left;
+    width: 100%;
+}
+
+.result-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.result-table th, .result-table td {
+    border: 1px solid #dfe1e5;
+    padding: 0.8rem;
+    vertical-align: top;
+}
+
+.result-table th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+    width: 30%;
+    text-transform: capitalize;
+}
+
+.error-message {
+    color: #d93025;
+    font-weight: bold;
+    background-color: #fce8e6;
+    border: 1px solid #d93025;
+    padding: 1rem;
+    border-radius: 8px;
+} */ 
+
+
+/* --- Color Palette and Global Styles --- */
+:root {
+    --deep-blue: #3A59D1;
+    --mid-blue: #3D90D7;
+    --cyan-teal: #7AC6D2;
+    --mint-green: #B5FCCD;
+    --dark-bg-start: #111827; /* Dark Slate Blue */
+    --dark-bg-end: #1F2937;   /* Darker Slate */
+    --container-bg: rgba(31, 41, 55, 0.6); /* Semi-transparent dark bg */
+    --light-text: #E5E7EB;
+    --dim-text: #9CA3AF;
+}
+
+/* --- Basic Styling --- */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(170deg, var(--dark-bg-start), var(--dark-bg-end));
+    margin: 0;
+    color: var(--light-text);
+}
+
+/* --- Main Container (Glassmorphism Effect) --- */
+.container {
+    background: var(--container-bg);
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+}
+
+/* --- Gradient Heading --- */
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    background: linear-gradient(90deg, var(--cyan-teal), var(--mint-green));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    color: var(--dim-text);
+    margin-bottom: 2rem;
+}
+
+/* --- Form Styling --- */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.radio-group {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.radio-group label {
+    cursor: pointer;
+    font-weight: 500;
+}
+
+/* Custom Radio Button Style */
+input[type="radio"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    margin-right: 0.5rem;
+    font: inherit;
+    color: var(--dim-text);
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid var(--dim-text);
+    border-radius: 50%;
+    transform: translateY(-0.075em);
+    display: inline-grid;
+    place-content: center;
+}
+input[type="radio"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    background-color: var(--cyan-teal);
+}
+input[type="radio"]:checked {
+    border-color: var(--cyan-teal);
+}
+input[type="radio"]:checked::before {
+    transform: scale(1);
+}
+
+/* --- File Upload Area --- */
+#file-drop-area {
+    border: 2px dashed var(--cyan-teal);
+    border-radius: 8px;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s;
+}
+
+#file-drop-area.drag-over, #file-drop-area:hover {
+    background-color: rgba(122, 198, 210, 0.1);
+    border-color: var(--mint-green);
+}
+
+#file-name {
+    font-weight: bold;
+    color: var(--cyan-teal);
+    margin-top: 1rem;
+}
+
+/* --- Gradient Button --- */
+button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    background: linear-gradient(45deg, var(--deep-blue), var(--mid-blue));
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: transform 0.2s, box-shadow 0.2s, filter 0.2s;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(61, 144, 215, 0.4);
+    filter: brightness(1.1);
+}
+
+/* --- Loader --- */
+.loader {
+    display: none;
+    width: 40px;
+    height: 40px;
+    border: 5px solid rgba(255, 255, 255, 0.2);
+    border-top: 5px solid var(--deep-blue);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 2rem auto 0;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* --- Results Area --- */
+#result-container {
+    margin-top: 2rem;
+    text-align: left;
+    width: 100%;
+}
+
+.result-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgba(0,0,0,0.2);
+}
+
+.result-table th, .result-table td {
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 0.8rem;
+    vertical-align: top;
+}
+
+.result-table th {
+    background-color: rgba(255, 255, 255, 0.1);
+    font-weight: bold;
+    width: 30%;
+    text-transform: capitalize;
+    color: var(--mint-green);
+}
+
+/* --- Error Message Styling --- */
+.error-message {
+    color: #ff8a80; /* Light Red */
+    font-weight: bold;
+    background-color: rgba(255, 138, 128, 0.1);
+    border: 1px solid rgba(255, 138, 128, 0.5);
+    padding: 1rem;
+    border-radius: 8px;
+}

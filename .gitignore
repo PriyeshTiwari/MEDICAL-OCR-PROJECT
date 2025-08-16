@@ -1,0 +1,17 @@
+# Python bytecode and virtual environments
+__pycache__/
+*.pyc
+.env
+venv/
+
+# IDE folders
+.idea/
+
+# Temporary upload folders (don't track user uploads)
+backend/uploads/
+
+# OS-specific files
+.DS_Store
+
+# Installers
+tesseract-ocr-w64-setup*.exe
